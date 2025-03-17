@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import AddMovie from "./Components/AddMovie";
+import MovieList from "./Components/MovieList";
+import FilterMovies from "./Components/FilterMovies";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <span></span>
+      <div className="container mt-4">
+        <h1 className="mb-4">🎬 Movies</h1>
+        <AddMovie />
+        <FilterMovies />
+        <MovieList />
+      </div>
+    </>
   );
-}
+};
 
 export default App;
